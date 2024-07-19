@@ -20,8 +20,8 @@ uint32_t  *const MSP_Value = (uint32_t *)&_estack;
     void WWDG_IRQHandler        (void) __attribute__ ((alias ("Default_Handler")));;                /* Window WatchDog              */                                        
     void PVD_IRQHandler         (void) __attribute__ ((alias ("Default_Handler")));;                 /* PVD through EXTI Line detection */                        
     void TAMP_STAMP_IRQHandler  (void) __attribute__ ((alias ("Default_Handler")));;                 /* Tamper and TimeStamps through the EXTI line */            
-    void RTC_WKUP_IRQHandler    (void) __attribute__ ((alias ("Default_Handler")));;                 /* RTC Wakeup through the EXTI line */                      
-    void FLASH_IRQHandler       (void) __attribute__ ((alias ("Default_Handler")));;                 /* FLASH                        */                                          
+    void RTC_WKUP_IRQHandler    (void) __attribute__ ((alias ("Default_Handler")));;                 /* RTC Wakeup through the EXTI line */        
+    void FLASH_IRQHandler       (void) __attribute__ ((alias ("Default_Handler")));;                 /* FLASH                        */                                                        
     void RCC_IRQHandler         (void) __attribute__ ((alias ("Default_Handler")));;                 /* RCC                          */                          
     void EXTI0_IRQHandler       (void) __attribute__ ((alias ("Default_Handler")));;                 /* EXTI Line0                   */                        
     void EXTI1_IRQHandler       (void) __attribute__ ((alias ("Default_Handler")));;                 /* EXTI Line1                   */                          
@@ -72,8 +72,8 @@ uint32_t  *const MSP_Value = (uint32_t *)&_estack;
     void I2C3_EV_IRQHandler      (void) __attribute__ ((alias ("Default_Handler")));;                /* I2C3 event                   */                          
     void I2C3_ER_IRQHandler      (void) __attribute__ ((alias ("Default_Handler")));;                /* I2C3 error                   */          
     void FPU_IRQHandler          (void) __attribute__ ((alias ("Default_Handler")));;                /* FPU                          */
-    void SPI4_IRQHandler         (void) __attribute__ ((alias ("Default_Handler")));;                /* SPI5                         */                   
-    void SPI5_IRQHandler         (void) __attribute__ ((alias ("Default_Handler")));;                /* SPI6                         */
+    void SPI4_IRQHandler         (void) __attribute__ ((alias ("Default_Handler")));;                /* SPI4                         */                   
+
 
 
 
@@ -150,7 +150,6 @@ uint32_t *Vector_Table[] __attribute__ ((section (".isr_vector"))) = {
     (uint32_t *)I2C3_ER_IRQHandler,                /* I2C3 error                   */          
     (uint32_t *)FPU_IRQHandler,                    /* FPU                          */
     (uint32_t *)SPI4_IRQHandler,                   /* SPI5                         */                   
-    (uint32_t *)SPI5_IRQHandler,                    /* SPI6                         */
 };
 
 
